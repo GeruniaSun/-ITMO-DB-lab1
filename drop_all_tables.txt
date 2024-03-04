@@ -1,0 +1,8 @@
+DROP TABLE Drawing_figure;
+DROP TABLE Person_hand_drawing;
+DROP TABLE Action;
+DROP TABLE Person_condition;
+DROP TABLE Figure;
+DROP TABLE Location;
+DROP TABLE Hand_drawings;
+DROP TABLE Person;

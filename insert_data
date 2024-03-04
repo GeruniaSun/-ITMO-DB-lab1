@@ -1,0 +1,132 @@
+INSERT INTO Location(name, coordinateX, coordinateY)
+VALUES
+	('Frank restuarant', 45, 54),
+	('ITMO main campus', 12, 21),
+	('Statue of Liberty', 56, 65),
+	('Austerlitz', 39, 21),
+	('Gymnasium 40', 56, 33),
+	('South Park', 12, 24),
+	('Vilnus aquapark', 45, 45);
+
+INSERT INTO Person(name, age, eyes_color)
+VALUES
+	('Anna', 18, 'blue'),
+	('Gera', 18, 'brown'),
+	('Natasha', 9, 'green'),
+	('Maksim Baton', 20, 'green'),
+	('Sergei', 18, 'brown'),
+	('Roman', 18, 'brown'),
+	('Artur Clark', 18, NULL),
+	('Aisek Azimov', 18, 'blue'),
+	('Artem', 18, NULL),
+	('Usama Ben Laden', 18, NULL);
+
+INSERT INTO Hand_drawings(name)
+VALUES
+	('left hand money line'),
+	('right hand lines'),
+	('bottom of right hand'),
+	('tatoo on left hand'),
+	('left hand lines'),
+	('same lines on both hands'),
+	('fingerprint of rihgt big finger'),
+	('life line on right hand');
+
+INSERT INTO Figure(name, description)
+VALUES
+	('pentagram',
+'A pentagram (sometimes known as a pentalpha, pentangle, or star pentagon) is a regular five-pointed star polygon, formed from the diagonal line segments of a convex (or simple, or non-self-intersecting) regular pentagon. Drawing a circle around the five points creates a similar symbol referred to as the pentacle, which is used widely by Wiccans and in paganism, or as a sign of life and connections. The word "pentagram" refers only to the five-pointed star, not the surrounding circle of a pentacle.'),
+
+	('Klein bottle',
+'In mathematics, the Klein bottle is an example of a non-orientable surface; that is, informally, a one-sided surface which, if traveled upon, could be followed back to the point of origin while flipping the traveler upside down. More formally, the Klein bottle is a two-dimensional manifold on which one cannot define a normal vector at each point that varies continuously over the whole manifold. Other related non-orientable surfaces include the Möbius strip and the real projective plane. While a Mobius strip is a surface with a boundary, a Klein bottle has no boundary. For comparison, a sphere is an orientable surface with no boundary.
+The Klein bottle was first described in 1882 by the mathematician Felix Klein.'),
+
+	('5-pointed star',
+'A five-pointed star, geometrically an equilateral concave decagon, is a common ideogram in modern culture. Comparatively rare in classical heraldry, it was notably introduced for the flag of the United States in the Flag Act of 1777 and since has become widely used in flags.'),
+
+	('Galaxy spiral',
+'Most spiral galaxies consist of a flat, rotating disk containing stars, gas and dust, and a central concentration of stars known as the bulge. These are often surrounded by a much fainter halo of stars, many of which reside in globular clusters.
+Spiral galaxies are named by their spiral structures that extend from the center into the galactic disc. The spiral arms are sites of ongoing star formation and are brighter than the surrounding disc because of the young, hot OB stars that inhabit them.'),
+	('K5 graph',
+'Graph with 5 vertex and lines between every two vertexes, usually draws like right pentagon with diagonals.'),
+
+	('corporation Umbrella  logo',
+'Looks like pizza sliced for eight parts, but every part rounded in opposite direction'),
+
+	('Dollar sign',
+'Looks like letter S with twoo vertical lines'),
+
+	('Triangle',
+'Triangle is a simple figure consists of three vertexes and lines between every two vertexes');
+
+INSERT INTO Drawing_figure(drawing_id, figure_id)
+VALUES
+	(1, 7),
+	(2, 8),
+	(3, 1),
+	(4, 6),
+	(5, 7),
+	(6, 8),
+	(8, 1),
+	(3, 3),
+	(3, 5),
+	(8, 3),
+	(8, 5),
+	(6, 6),
+	(4, 8);
+INSERT INTO Person_hand_drawing(person_id, drawing_id)
+VALUES
+	(1, 1),
+	(2, 1),
+	(3, 8),
+	(4, 4),
+	(5, 3),
+	(6, 5),
+	(8, 7),
+	(8, 6),
+	(6, 7),
+	(5, 1),
+	(4, 5),
+	(2, 6),
+	(3, 4);
+
+INSERT INTO Person_condition(person_id, mood, health, timestamp, location_id)
+VALUES
+	(1, 'awesome', 'good', '2024-02-23 19:35:23', 4),
+	(2, 'peevish', 'good', '2024-12-13 09:32:54', 1),
+	(3, 'awesome', 'dead ', '2024-03-03 23:25:12', 2),
+	(4, 'miserable', 'sick', '2024-02-21 05:55:34', 3),
+	(5, 'awed', 'good', '2023-02-28 13:36:23', 4),
+	(6, 'shocked', 'good', '2022-07-13 14:34:54', 4),
+	(7, 'irritated', 'good', '2023-04-23 19:53:44', 5),
+	(8, 'anxious', 'good', '2022-02-23 14:28:24', 4),
+	(9, 'satisfied', 'dead ', '2000-06-17 15:49:00', 7),
+	(10, 'lovey-dovey', 'good', '2005-09-23 09:10:11', 2),
+	(1, 'delighted', 'good', '2017-12-12 19:34:05', 6),
+	(2, 'cheery ', 'sick', '1975-02-19 15:26:47', 4),
+	(2, 'baffled', 'good', '1945-02-09 17:38:26', 3),
+	(4, 'satisfied', 'good', '1856-04-23 16:42:43', 1),
+	(5, 'awesome', 'good', '2018-01-23 16:52:13', 7),
+	(4, 'awesome', 'sick ', '1934-02-23 17:31:53', 5),
+	(7, 'awed', 'sick', '2014-02-26 09:00:59', 2),
+	(8, 'miserable', 'good', '2024-07-28 19:35:28', 3);
+INSERT INTO Action(condition_id, name)
+VALUES
+	(1, 'running'),
+	(2, 'eating pizza'),
+	(4, 'planning future'),
+	(6, 'studying java'),
+	(7, 'laughing'),
+	(3, 'jumping'),
+	(18, 'skiing'),
+	(9, 'running'),
+	(10, 'learning english'),
+	(11, 'listening music'),
+	(3, 'reading'),
+	(14, 'watching TV'),
+	(13, 'surfing'),
+	(12, 'eating pizza'),
+	(17, 'running'),
+	(4, 'surfing'),
+	(6, 'laughing'),
+	(2, 'eating pizza');
