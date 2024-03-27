@@ -10,7 +10,7 @@ description TEXT
 CREATE TABLE Person (
 id SERIAL PRIMARY KEY,
 name VARCHAR(50) NOT NULL,
-age INTEGER NOT NULL CHECK (age > 0),
+birth_date DATE CHECK(birth_date < CURRENT_DATE),
 eyes_color VARCHAR(20)
 );
 CREATE TABLE Drawing_figure (
