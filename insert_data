@@ -8,18 +8,18 @@ VALUES
 	('South Park', 12, 24),
 	('Vilnus aquapark', 45, 45);
 
-INSERT INTO Person(name, age, eyes_color)
+INSERT INTO Person(name, birth_date, eyes_color)
 VALUES
-	('Anna', 18, 'blue'),
-	('Gera', 18, 'brown'),
-	('Natasha', 9, 'green'),
-	('Maksim Baton', 20, 'green'),
-	('Sergei', 18, 'brown'),
-	('Roman', 18, 'brown'),
-	('Artur Clark', 18, NULL),
-	('Aisek Azimov', 18, 'blue'),
-	('Artem', 18, NULL),
-	('Usama Ben Laden', 18, NULL);
+	('Anna', '2005-06-15', 'blue'),
+	('Gera', '2005-06-05', 'brown'),
+	('Natasha', '2005-03-08', 'green'),
+	('Maksim Baton', '2005-02-21', 'green'),
+	('Sergei', '2005-11-13', 'brown'),
+	('Roman', '2005-07-27', 'brown'),
+	('Artur Clark', '1997-12-16', NULL),
+	('Aisek Azimov', '1919-10-04', 'blue'),
+	('Artem', '2006-01-26', NULL),
+	('Usama Ben Laden', '1957-03-10', NULL);
 
 INSERT INTO Hand_drawings(name)
 VALUES
